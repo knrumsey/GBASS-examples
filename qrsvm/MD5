@@ -1,0 +1,15 @@
+a8c4cb11f79771260568a02e51b81eb8 *DESCRIPTION
+7dfb58103cd31cf2ed5db8605e2b450e *NAMESPACE
+4fbd146f9dff98de484ec5d786a2c37f *R/kernelMat.R
+e6483bff29f4337aea7ccda209e7c455 *R/multqrsvm.R
+9a7535758487c8ef894b23f8b8cd109f *R/predict.multqrsvm.R
+88c6bb1d0f9299839e6e99316b5fab17 *R/predict.qrsvm.R
+1f9d68823dee2cc0760a547271a82256 *R/print.multqrsvm.R
+9d60078bfca2f41ec486efc60d9dceb6 *R/print.qrsvm.R
+336759d0be37d786cab50454a3a76d80 *R/qrsvm.R
+b8e24b700c6c16c9f4c008e51ecd37f4 *R/summary.qrsvm.R
+54574490034e0edbd2fc120f76f8fe51 *man/kernelMat.Rd
+80ff9b2ae9b786f21615da532ccc8db2 *man/multqrsvm.Rd
+9e407acd5ee8c345c944c7a024b02c2a *man/predict.multqrsvm.Rd
+66da44d3ce7cc77b5f9a1c4f79688d9b *man/predict.qrsvm.Rd
+2d18ef041ff47fad43039e20c3220f9b *man/qrsvm.Rd
