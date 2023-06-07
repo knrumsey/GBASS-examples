@@ -1,9 +1,9 @@
 {
     "id": "5A55466E",
-    "path": "~/Desktop/BayesianMARS/GBASS-examples/README.Rmd",
+    "path": "~/Desktop/Software_Kellin/GBASS-examples/README.Rmd",
     "project_path": "README.Rmd",
     "type": "r_markdown",
-    "hash": "4252880541",
+    "hash": "3221097522",
     "contents": "",
     "dirty": false,
     "created": 1685739732064.0,
@@ -12,15 +12,15 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "18,66",
-        "scrollLine": "11"
+        "cursorPosition": "45,16",
+        "scrollLine": "36"
     },
     "folds": "",
-    "lastKnownWriteTime": 1685739764,
+    "lastKnownWriteTime": 1686163958,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1685739764059,
+    "last_content_update": 1686163958576,
     "read_only": false,
     "read_only_alternatives": []
 }
