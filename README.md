@@ -7,8 +7,9 @@
 <!-- badges: end -->
 
 This repo contains scripts used to generate figures and tables for the
-examples found in the manuscript *Generalized Bayesian MARS: Tools for
-Emulating Stochastic Computer Models* (link to paper when published).
+examples found in the manuscript [*Generalized Bayesian MARS: Tools for
+Emulating Stochastic Computer
+Models*](https://arxiv.org/pdf/2306.01911).
 
 - **mcycle:** Script for quantile regression using the well-know
   motorcycle dataset.
