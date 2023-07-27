@@ -1,5 +1,13 @@
 source("Piston/piston_setup.R")
 
+VARY <- 0.0198
+SNR  <- 3
+N    <- 1000
+M    <- 1
+Nt   <- 1000
+nt   <- 30 # predictive draws per posterior sample.
+alpha<- 1 - c(0.5, 0.8, 0.9, 0.95, 0.99)
+
 set.seed(12310981)
 df_vec <- c(8,   12,  20,     40,    100,   4)
 lg_vec <- c(0.6,  0, -0.792, log(2), 0.25, -0.2)
@@ -17,15 +25,6 @@ for(k in 1:length(df_vec)){
   sk_vec[k] <- skew(tmp2)
 }
 
-
-
-VARY <- 0.0198
-SNR  <- 3
-N    <- 1000
-M    <- 1
-Nt   <- 1000
-nt   <- 30 # predictive draws per posterior sample.
-alpha<- 1 - c(0.5, 0.8, 0.9, 0.95, 0.99)
 
 # Models:
 # mod1: GBASS

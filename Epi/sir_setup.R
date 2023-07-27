@@ -8,6 +8,8 @@ library(parallel)
 library(RColorBrewer)
 source("Epi/stochastic_sir.R")
 
+load("Epi/data/stohcastic_sir_data2.Rda")
+
 rmse <- function(x, y){
   sqrt(mean((x-y)^2))
 }
