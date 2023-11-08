@@ -8,7 +8,7 @@ Nt   <- 1000
 nt   <- 30 # predictive draws per posterior sample.
 alpha<- 1 - c(0.5, 0.8, 0.9, 0.95, 0.99)
 
-set.seed(12310981)
+set.seed(123109811)
 df_vec <- c(8,   12,  20,     40,    100,   4)
 lg_vec <- c(0.6,  0, -0.792, log(2), 0.25, -0.2)
 sk_vec <- rep(NA, length(df_vec))
@@ -148,8 +148,6 @@ for(k in 1:(length(df_vec)+1)){
   abline(0,1, lty=3, col='red')
 
 
-
-
   # 3. BART
   mod3 <- wbart(X, y)
 
@@ -187,8 +185,8 @@ for(k in 1:(length(df_vec)+1)){
   covr4 <- matrix(NA, nrow=Nt, ncol=5)
   KS4   <- rep(NA, Nt)
   for(i in 1:Nt){
-    fit4 <- laGP(t(X2[i,]), start=10, end=30,
-                 X, y,
+    fit4 <- laGP(t(X2[i,]), start=10, end=round(sqrt(N)),
+                 X, y, g=garg(g=list(mle=TRUE), y=y3),
                  method="alc")
     yhat4[i] <- fit4$mean
     yy <- y2[i] + eps
@@ -304,18 +302,18 @@ for(k in 2:4){
 }
 
 
-png("Piston/figs/coverage3.png", height=5, width=5, units="in", res=300)
+png("Piston/figs/coverage0.png", height=5, width=5, units="in", res=300)
 par(mfrow=c(1,1))
 bob <- RColorBrewer::brewer.pal(6, "Set2")
-plot(NULL, xlim=c(0.5, 1), ylim=c(-0.5, 0.1),
+plot(NULL, xlim=c(0.5, 1), ylim=c(-0.105, 0.075),
      xlab="Desired Coverage", ylab="Difference in Nominal Coverage")
 abline(h=0, lwd=2, lty=3)
-for(i in 1:6){
+for(i in c(1:6)[-3]){
   lines(1-alpha, TAB_list[[7]][i,4:8]-(1-alpha), lwd=2, col=bob[i])
-  points(1-alpha, TAB_list[[7]][i,4:8]-(1-alpha), pch=i, col=bob[i], cex=2, lwd=2)
+  points(1-alpha, TAB_list[[7]][i,4:8]-(1-alpha), pch=i, col=bob[i], cex=1.5, lwd=2)
 }
-legend("center", c("Normal-Wald (BMARS)", "t(10) (BMARS)", "Laplace (BMARS)", "Gaussian (BASS)", "BART", "laGP"),
-       lwd=2, col=bob, pch=1:6, cex=0.8)
+legend(0.65, -0.025, c("Normal-Wald (BMARS)", "t(10) (BMARS)", "Laplace (BMARS)", "Gaussian (BASS)", "BART", "laGP")[-3],
+       lwd=2, col=bob[-3], pch=(1:6)[-3], cex=0.75)
 dev.off()
 
 # Make tables

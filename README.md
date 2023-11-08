@@ -22,6 +22,8 @@ Models*](https://arxiv.org/pdf/2306.01911).
   stochastic SIR model with intervention.
 - **qrsvm** A local copy of the qrsvm package which is (at the time of
   writing) inaccesible on CRAN.
+- **scaling** Script for the scaling study (as a function of input
+  dimension) in the supplemental materials (by request of a reviewer.)
 
 To run these examples, the `GBASS` package ([found
 here](https://github.com/knrumsey/GBASS)) is needed. The `GBASS` package
